@@ -34,6 +34,26 @@ You should end up with something like this
 └── ...
 ```
 
+### Create and setup repo
+
+Now go to [Stash](https://stash.9msn.net/projects/PSW/repos?create) and create a new repository. Name it with the job number first, followed by the type of project, then brand name. E.g.
+```7400-immersive-APT```
+
+After creating the repo, you will then have instructions on how to change your remote origin.
+
+```
+git remote set-url origin https://stash.9msn.net/scm/psw/REPO-NAME-HERE.git
+git push -u origin --all
+git push origin --tags
+```
+
+Now in your local folder, rename your cloned-repo-url folder from `000-pantheon-website-template` to `REPO-NAME-HERE`
+E.g. `7400-immersive-APT`
+
+You should be able to refresh your repo on stash and see all your files there.
+
+You are now ready to begin developing!
+
 # INSTALLATION
 ```
 nvm use
