@@ -30,7 +30,7 @@ You should end up with something like this
 ├── native-paid-content           # Pantheon site root
 │   └── brand-name                # Brand root
 │       ├── page-title            # Compiled production files (e.g. dist)
-│       └── cloned-repo-url       # Your cloned repo for development
+│       └── cloned-template       # Your cloned repo for development
 └── ...
 ```
 
