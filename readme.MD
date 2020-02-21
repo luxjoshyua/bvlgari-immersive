@@ -12,7 +12,7 @@ mkdir brand-name
 cd ./brand-name
 ```
 
-* Now get your HTTPS repo-url copied for cloning
+* Now get your HTTPS template repo-url copied for cloning
 * clone your repo
 * make your output/dist folder
 * and navigate to your repo folder to start development
