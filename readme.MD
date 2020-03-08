@@ -233,7 +233,7 @@ Then add the corresponding GTM script above the closing `</head>` tag.
  <!-- End Google Tag Manager -->
 ```
 
-Then add the corresponding closing GTM script below the closing `</body>` tag.
+Then add the corresponding closing GTM script above the closing `</body>` tag.
 
  ```
 <!-- Google Tag Manager (noscript) -->
