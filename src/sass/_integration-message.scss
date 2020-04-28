@@ -1,0 +1,12 @@
+.integration-message {
+  @include centreContent;
+  flex-direction: column;
+  .integration-text {
+    font-size: 10px;
+  }
+  .integration-logo {
+    img {
+      max-width: 120px;
+    }
+  }
+}
