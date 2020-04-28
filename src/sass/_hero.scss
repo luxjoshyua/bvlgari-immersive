@@ -1,0 +1,36 @@
+header {
+  background-color: fuchsia;
+}
+
+.hero {
+  min-height: 100vh;
+
+  .next {
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    transform: translateX(24px);
+    width: 100%;
+    height: 35px;
+    background-image: url("../assets/images/arrow-down.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+    animation: arrowDown 2s infinite ease-in-out;
+    background-position: center;
+  }
+}
+
+// arrow pulse
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
