@@ -2,10 +2,11 @@
 @import "variables";
 @import "mixins-utilities";
 @import "media-queries";
+@import "masthead";
+@import "integration-message";
 @import "hero";
 @import "fonts";
 @import "chapters";
-@import "integration-message";
 @import "ie-edge-fixes";
 
 body {

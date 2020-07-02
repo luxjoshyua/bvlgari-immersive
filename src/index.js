@@ -20,11 +20,3 @@ fairfax({
     logoColor: "white"
   }
 });
-
-document.querySelector(".hero .next").addEventListener("click", () => {
-  window.scrollTo({
-    left: 0,
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
-});

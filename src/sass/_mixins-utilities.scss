@@ -15,3 +15,390 @@
   padding: 0;
   position: absolute;
 }
+.anim {
+  &-bounce {
+    animation: bounce 1s ease-in-out infinite forwards;
+  }
+  &-hover {
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+.grid {
+  // opacity: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  .columns {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    .column {
+      display: flex;
+      width: nth($cols, 12);
+      margin: 0 12px;
+      background-color: rgba(180, 242, 239, 0.5);
+      height: 100vh;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.inner {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(desk-sm) {
+    max-width: 768px;
+  }
+  @include breakpoint(mob-sm) {
+    max-width: 300px;
+  }
+}
+.width {
+  &-100 {
+    width: 100%;
+  }
+}
+.cols {
+  display: flex;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+
+  @include breakpoint(desk-sm) {
+    width: 100% !important;
+    padding: 0 50px;
+    flex-direction: column !important;
+  }
+  @include breakpoint(mob-lg) {
+    padding: 0 20px;
+  }
+  @include breakpoint(mob-sm) {
+    padding: 0 5px;
+  }
+}
+.cols > .cols {
+  @include breakpoint(desk-sm) {
+    padding: 0;
+  }
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(#{$max-width} / 12 * #{$i});
+  }
+}
+@for $i from 1 through 12 {
+  .col-spacer-#{$i} {
+    padding-left: calc(#{$max-width-true} / 12 * #{$i});
+  }
+}
+.flex {
+  &-col {
+    flex-direction: column !important;
+  }
+  &-align-end {
+    align-items: flex-end !important;
+  }
+  &-align-stretch {
+    align-items: stretch !important;
+  }
+  &-1 {
+    flex: 1;
+  }
+}
+.width-100 {
+  width: 100%;
+}
+.full-width-align {
+  margin-left: calc((100% - #{$max-width-true}) / 2);
+  @include breakpoint(desk-sm) {
+    margin-left: 0;
+  }
+}
+.chapter {
+  position: relative;
+}
+
+.boxed {
+  padding: 0px 22px 0px;
+  margin: 48px 0 76px;
+
+  color: white;
+  font-family: "Charlie Pro";
+  display: block;
+  font-size: 36px;
+  line-height: 64px;
+}
+.button {
+  background-color: $secondary;
+  display: inline-block;
+  font-family: "Charlie Pro";
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 14px 30px 11px;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+.reverse {
+  color: $white;
+  background-color: $black;
+}
+.sticky-overlay {
+  position: fixed;
+  width: 100%;
+  // height: 68px;
+  top: 44px;
+  left: 0;
+  background: $white;
+  color: $black;
+  z-index: 100;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+  @include breakpoint(desk-sm) {
+    // position: absolute;
+  }
+  @include breakpoint(mob-lg) {
+    // width: auto;
+  }
+
+  .inner {
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(mob-lg) {
+      display: none;
+      height: 100%;
+      align-items: center;
+      height: 440px;
+    }
+    &:before {
+      content: "";
+      top: -6px;
+      height: 10px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      z-index: -1;
+      @include breakpoint(desk-sm) {
+        display: none;
+      }
+    }
+    &.active {
+      @include breakpoint(desk-sm) {
+        display: block;
+      }
+      nav {
+        @include breakpoint(desk-sm) {
+          display: block;
+        }
+      }
+    }
+    nav {
+      position: relative;
+      width: 100%;
+      @include breakpoint(desk-sm) {
+        height: 100vh;
+        display: none;
+      }
+      @include breakpoint(mob-lg) {
+        // display: block;
+        height: 440px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        @include breakpoint(desk-sm) {
+          flex-direction: column;
+          text-align: center;
+          justify-content: flex-start;
+        }
+        @include breakpoint(mob-lg) {
+          padding: 0 2rem;
+        }
+        li {
+          a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.125em;
+            color: $black;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            padding: 24px 0 26px;
+            display: inline-block;
+
+            @include breakpoint(desk-md) {
+              font-size: 12px;
+            }
+            @include breakpoint(desk-sm) {
+              font-family: "CBASlab", Georgia, "Times New Roman", Times, serif;
+              font-size: 22px;
+              line-height: 1.27em;
+              color: #231f20;
+              max-width: 312px;
+            }
+
+            &:hover {
+              &:before {
+                background: none;
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 17px;
+                border-bottom: 7px solid $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.exit {
+  right: 6%;
+  position: fixed;
+  background: $secondary;
+  padding: 12px 28px;
+  border-radius: 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  top: 84vh;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.35);
+  z-index: 10000;
+  transform: translate3d(0, 0, 0);
+  @include breakpoint(desk-xl) {
+    right: 20px;
+  }
+  @include breakpoint(desk-lg) {
+    right: 10px;
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  @include breakpoint(desk-sm) {
+    top: 90vh;
+  }
+  @include breakpoint(mob-lg) {
+    top: 85vh;
+    right: 0;
+  }
+  &:hover {
+    background: #231f20;
+    color: white;
+  }
+}
+.hamburger {
+  @include breakpoint(desk-sm) {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+.hamburger-nav {
+  @include breakpoint(desk-sm) {
+    font: inherit;
+    display: flex;
+    overflow: visible;
+    margin: 0;
+    padding: 10px 20px 10px 0;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+
+    .nav-box {
+      position: relative;
+      display: inline-block;
+      width: 26px;
+      height: 20px;
+
+      .nav-inner,
+      .nav-inner:before,
+      .nav-inner:after {
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        transition-timing-function: ease;
+        transition-duration: 0.15s;
+        transition-property: transform;
+        border-radius: 3px;
+        background-color: #231f20;
+      }
+      .nav-inner {
+        top: 2px;
+        display: block;
+        margin-top: -2px;
+        &:before,
+        &:after {
+          display: block;
+          content: "";
+        }
+        &:before {
+          top: 8px;
+          transition-timing-function: ease;
+          transition-duration: 0.15s;
+          transition-property: transform, opacity;
+        }
+        &:after {
+          top: 16px;
+          bottom: -10px;
+          display: block;
+          content: "";
+        }
+      }
+    }
+    &.active {
+      .nav-inner {
+        top: 0px;
+        transform: translate3d(0, 10px, 0) rotate(45deg);
+        &:before,
+        &:after {
+          background-color: #231f20;
+        }
+        &:before {
+          transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+          opacity: 0;
+        }
+        &:after {
+          top: 20px;
+          transform: translate3d(0, -20px, 0) rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+
