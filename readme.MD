@@ -88,41 +88,12 @@ git push origin master
 
 # GOING LIVE
 ## Checklist
-1. Login to __Facebook__ and visit https://developers.facebook.com/tools/debug/ and paste the final production URL and ensure the canonical URL is not redirecting or causing problems. This is essential for swift SimpleReach QA'ing!
+1. Login to __Facebook__ and visit https://developers.facebook.com/tools/debug/ and paste the final production URL and ensure the canonical URL is not redirecting or causing problems.
 2. Visit [https://metatags.io/](https://metatags.io/) and paste the production url and ensure social sharing image and other text is sensible and correct.
 3. Change the url/path in the `apple-touch-icon` section of the `<meta>` to ensure the correct logos are showing for the primary domain being used on the site. Login to [Pantheon Media Upload](https://live-native-paid-content.pantheonsite.io/wp-admin/upload.php) to find the correct url's for these assets.
 
-### SimpleReach
-4. Check that you have added your __SimpleReach__ code above the `</body>` tag, changing the items below marked with `xxxx`'s. Visit the [SimpleReach guide](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::1d4ae9f3-53d9-44d6-9f41-9df311b3486c?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A14%2C%5C%22sectionId%5C%22%3A17%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3Aa93b5960fc604e5a9d3fdacbc25f1f23%40thread.skype%22%7D&tenantId=1211f5b7-bd34-4621-8eef-3ebbcb827794) on Teams for more details.
-```
-<!-- SIMPLE REACH -->
- <script>
- __reach_config = {
- // pid: "54c16760371c84291c00014e",
- pid: "000000000000000000000000",
- title: document.title,
- date: "xxxx-xx-xx 00:00:00",
- channels: ["xxxx"],
- article_id: "xxxx-xxxx-xxxx",
- ignore_errors: false,
- scroll_depth: true
- };
- (function() {
- var e = document.createElement("script");
- (e.async = !0),
- (e.type = "text/javascript"),
- (e.src =
- document.location.protocol +
- "//d8rk54i4mohrb.cloudfront.net/js/reach.js"),
- (
- document.getElementsByTagName("head")[0] ||
- document.getElementsByTagName("body")[0]
- ).appendChild(e);
- })();
- </script>
- ```
 ### Titan Datalayer
-5. Check that you have added your Titan Datalayer code accordingly. Visit the [Titan Datalayer guide](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::1d4ae9f3-53d9-44d6-9f41-9df311b3486c?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A14%2C%5C%22sectionId%5C%22%3A15%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3Aa93b5960fc604e5a9d3fdacbc25f1f23%40thread.skype%22%7D&tenantId=1211f5b7-bd34-4621-8eef-3ebbcb827794) for more information.
+4. Check that you have added your Titan Datalayer code accordingly. Visit the [Titan Datalayer guide](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::1d4ae9f3-53d9-44d6-9f41-9df311b3486c?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A14%2C%5C%22sectionId%5C%22%3A15%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3Aa93b5960fc604e5a9d3fdacbc25f1f23%40thread.skype%22%7D&tenantId=1211f5b7-bd34-4621-8eef-3ebbcb827794) for more information.
 
 ```
 <!-- TITAN GTM -->
@@ -248,7 +219,7 @@ Then add the corresponding closing GTM script above the closing `</body>` tag.
  <!-- End Google Tag Manager (noscript) -->
 ```
 ### Backup Studio Google Analytics
-6. This is shared and identical on all implementations, and does not require any tweaking.
+5. This is shared and identical on all implementations, and does not require any tweaking.
 Place this code above the closing `</head>` tag. Please see the [Teams GA guide](https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::1d4ae9f3-53d9-44d6-9f41-9df311b3486c?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A14%2C%5C%22sectionId%5C%22%3A16%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3Aa93b5960fc604e5a9d3fdacbc25f1f23%40thread.skype%22%7D&tenantId=1211f5b7-bd34-4621-8eef-3ebbcb827794) for more information.
 
 ```
