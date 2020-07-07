@@ -3,10 +3,10 @@ import "regenerator-runtime/runtime";
 import "./sass/index.scss";
 
 // remember to install first! $ npm i fairfax-header
-import fairfax from "fairfax-header";
+import masthead from "nine-immersive-header";
 
 //header
-fairfax({
+masthead({
   headerConfig: {
     logoColor: "white",
     bgColor: "transparent",
@@ -16,7 +16,7 @@ fairfax({
     }
   },
   footerConfig: {
-    bgColor: "transparent",
+    bgColor: "black",
     logoColor: "white"
   }
 });
