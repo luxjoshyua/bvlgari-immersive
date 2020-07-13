@@ -13,7 +13,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              name: "[path][name].[ext]",
+              name: "[path][name].[contenthash].[ext]",
               limit: 10000
             }
           },
