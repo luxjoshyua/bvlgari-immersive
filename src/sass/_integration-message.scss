@@ -25,20 +25,6 @@ footer {
     color: $black;
     padding-top: 50px;
     padding-bottom: 50px;
-    @include breakpoint(desk-sm) {
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        background: $secondary;
-        height: 100%;
-        @include breakpoint(mob-lg) {
-          width: 10px;
-        }
-      }
-    }
     a {
       display: inline-block;
       img {
