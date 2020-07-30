@@ -10,6 +10,12 @@ footer {
     left: 0;
     z-index: 1000;
     position: fixed;
+    .header-item{
+      a{
+        display: flex;
+      }
+    }
+    /* NINE HEADER BELOW*/
     .headersection {
       display: flex;
 
