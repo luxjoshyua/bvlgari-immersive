@@ -1,5 +1,8 @@
 // Write Internet Explorer hacks here
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .masthead .share-icons .icon svg{
+    width: 20px;
+  }
 }
 
 // Write Edge hacks here
