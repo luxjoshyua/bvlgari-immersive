@@ -9,6 +9,9 @@
 @import "chapters";
 @import "ie-edge-fixes";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
