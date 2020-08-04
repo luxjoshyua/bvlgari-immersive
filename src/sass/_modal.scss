@@ -1,0 +1,159 @@
+.modal-hero{
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  display: flex;
+  z-index: 999;
+  @include breakpoint(mob-lg){
+    top: 5px;
+    right: 5px;
+  }
+  cursor: pointer;
+  &:hover{
+    .modal-label{
+      opacity: 1;
+    }
+  }
+  .modal-label{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin-right: 2px;
+    display: inline-block;
+    opacity: 0;
+    transition: all .4s;
+    white-space: nowrap;
+  }
+  .modal-trigger{
+    position: relative;
+    width: 44px;
+    height: 44px;
+    svg{
+      border-radius: 8px;
+      width: 32px;
+      height: 32px;
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 55px;
+      background-color: white;
+      text{
+        font-size: 90%;
+        transform: translate(0,-2px);
+      }
+    }
+  }
+}
+.modal-wrapper{
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  .modal-overlay{
+    position: initial;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: none;
+    background: none;
+    overflow: auto;
+    border-radius: 0px;
+    outline: none;
+    padding: 0px;
+    height: 1px;
+    width: 1px;
+    .modal-button-container {
+      position: absolute;
+      top: 86px;
+      right: 32px;
+      display: flex;
+      cursor: pointer;
+      @include breakpoint(mob-lg){
+        top: 65px;
+        right: 10px;
+      }
+      .modal-label{
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 33px;
+        margin-right: 8px;
+        color: white;
+      }
+      .modal-button-style, .modal-trigger svg {
+        border-radius: 4px;
+        width: 32px;
+        height: 32px;
+        font-weight: 700;
+      }
+      .modal-button-style{
+        text-align: center;
+        position: relative;
+        font-size: 55px;
+        line-height: 20px;
+        color: black;
+        background: white;
+        .button-circle {
+          border: 2px solid #000;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          position: absolute;
+          -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          &.close{
+            &:before, &:after{
+              background-color: black !important;
+              position: absolute;
+              left: 7px;
+              top: 3px;
+              content: " ";
+              height: 10px;
+              width: 2px;
+              transform: rotate(45deg);
+            }
+            &:after{
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .modal-content{
+      transform: translate(-50%,-50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      max-width: 544px;
+      text-align: center;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      h3{
+        margin-bottom: 1em;
+        u{
+          text-decoration: none;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+}
+.modal-open{
+  .modal-wrapper{
+    display: block;
+    opacity: 1;
+  }
+}
