@@ -1,7 +1,7 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "./sass/index.scss";
-
+import "./modal";
 // remember to install first! $ npm i fairfax-header
 import masthead from "nine-immersive-header";
 
