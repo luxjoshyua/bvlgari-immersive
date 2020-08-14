@@ -1,5 +1,6 @@
 .chapter {
   position: relative;
+  padding: 100px 0;
   .inner {
     max-width: 1240px;
     display: flex;
@@ -7,4 +8,13 @@
     align-items: center;
     margin: 0 auto;
   }
+}
+.chapter-2{
+  background-color: #666;
+}
+.chapter-3{
+  background-color: #333;
+}
+.chapter-4{
+  background-color: #222;
 }

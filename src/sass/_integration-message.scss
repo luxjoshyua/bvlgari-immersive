@@ -1,42 +1,8 @@
 .integration-message {
   @include centreContent;
   flex-direction: column;
-  .integration-text {
-    font-size: 10px;
-  }
-  .integration-logo {
-    img {
-      max-width: 120px;
-    }
-  }
-}
-
-header {
-  .integration-message {
-    top: 142px;
-    @include breakpoint(desk-sm) {
-      top: 74px;
-    }
-  }
-}
-footer {
-  .integration-message {
-    position: relative;
-    color: $black;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    a {
-      display: inline-block;
-      img {
-        margin-top: 15px;
-      }
-    }
-    h3 {
-      color: $black;
-    }
-  }
-}
-.integration-message {
+  width: 300px;
+  display: inline-block;
   position: absolute;
   top: 0px;
   left: 0;
@@ -47,44 +13,41 @@ footer {
   display: block;
   text-align: center;
 
-  h3 {
-    font-size: 13px;
-    line-height: 2.4em;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin: 0 0 0px;
-    color: $bg;
-    font-family: open-sans, Arial, Helvetica, sans-serif;
-    font-size: 12px;
+  @include breakpoint(mob-lg){
+    width: 250px;
+  }
+  .integration-text {
+    color: $white;
+    font-size: 1.4rem;
     line-height: 1em;
-    font-weight: 700;
-    @include breakpoint(desk-sm) {
-      font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    margin: 0 0 0px;    
+    padding-bottom: 12px;
+  }
+  .integration-logo {
+    transition: 0.2s ease-in-out;
+    img {
+      width: 100px;
+      height: auto;
     }
-    @include breakpoint(mob-lg) {
-      letter-spacing: 1px;
-      font-size: 10px;
+    &:hover {
+      img{
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+      }
     }
   }
+}
 
-  a {
-    display: none;
-    transition: 0.2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: 0.2s ease-in-out;
-    }
-
-    img {
-      width: 123px;
-      height: auto;
-      @include breakpoint(desk-sm) {
-        width: 144px;
-      }
-      @include breakpoint(mob-lg) {
-        width: 110px;
-      }
-    }
+header {
+  &.integration-message {
+    top: 70px;
+  }
+}
+footer {
+  &.integration-message {
+    position: relative;
+    padding: 100px 0;
   }
 }

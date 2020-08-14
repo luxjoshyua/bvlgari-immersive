@@ -28,8 +28,8 @@
   }
 }
 .grid {
-  // opacity: 1;
-  display: none;
+  opacity: 0;
+  // display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -282,41 +282,6 @@
     }
   }
 }
-.exit {
-  right: 6%;
-  position: fixed;
-  background: $secondary;
-  padding: 12px 28px;
-  border-radius: 23px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  top: 84vh;
-  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.35);
-  z-index: 10000;
-  transform: translate3d(0, 0, 0);
-  @include breakpoint(desk-xl) {
-    right: 20px;
-  }
-  @include breakpoint(desk-lg) {
-    right: 10px;
-    font-size: 14px;
-    padding: 8px 20px;
-  }
-  @include breakpoint(desk-sm) {
-    top: 90vh;
-  }
-  @include breakpoint(mob-lg) {
-    top: 85vh;
-    right: 0;
-  }
-  &:hover {
-    background: #231f20;
-    color: white;
-  }
-}
 .hamburger {
   @include breakpoint(desk-sm) {
     width: auto;
@@ -400,5 +365,10 @@
     }
   }
 }
-
+.anchor {
+  top: -$masthead-height-desktop;
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
 

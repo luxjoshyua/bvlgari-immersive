@@ -2,21 +2,17 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "./sass/index.scss";
 import "./modal";
-// remember to install first! $ npm i fairfax-header
 import masthead from "nine-immersive-header";
 
 //header
 masthead({
   headerConfig: {
     logoColor: "white",
-    bgColor: "transparent",
-    // textColor: "white",
-    css: {
-      borderBottom: "solid 1px white"
-    }
+    bgColor: "#0A1633",
+    textColor: "white",
   },
   footerConfig: {
-    bgColor: "black",
+    bgColor: "#0A1633",
     logoColor: "white"
   }
 });

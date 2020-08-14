@@ -17,11 +17,14 @@ $desk-lg: 1439px;
 $desk-xl: 1919px;
 $desk-xxl: 1920px;
 
-$height-100: calc(100vh - 54px);
+$masthead-height-desktop: 44px;
+$masthead-height-mob: 44px;
+$height-100: calc(100vh - #{$masthead-height-desktop});
 $min-height: 600px;
 $max-width: 1240px;
 $max-width-true: 1280px;
 $col-spacing: 20px;
+
 
 .font {
   &-blue {
