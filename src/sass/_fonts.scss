@@ -1,0 +1,14 @@
+@mixin font-opentype{
+  -moz-font-feature-settings: "liga", "dliga", "kern", "onus";
+  -moz-font-feature-settings: "liga=1", "dliga=1", "kern=1", "onus=1";
+  -ms-font-feature-settings: "liga", "dliga", "kern", "onus";
+  -o-font-feature-settings: "liga", "dliga", "kern", "onus";
+  -webkit-font-feature-settings: "liga", "dliga", "kern", "onus";
+  font-feature-settings: "liga", "dliga", "kern", "onus";
+}
+@mixin font-smoothing{
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: auto;
+}

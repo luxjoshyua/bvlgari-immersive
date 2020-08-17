@@ -20,8 +20,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.4rem;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  @include font-opentype;
+  @include font-smoothing;
 }
 
 * {
