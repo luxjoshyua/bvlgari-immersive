@@ -5,7 +5,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: [{ loader: "html-loader", options: { minimize: true } }]
+        use: [{ loader: "html-loader", options: { minimize: false } }]
       },
       {
         test: /\.(png|jpe?g)/i,
