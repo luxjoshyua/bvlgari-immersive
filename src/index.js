@@ -3,6 +3,7 @@ import "regenerator-runtime/runtime";
 import "./sass/index.scss";
 import "./modal";
 import masthead from "nine-immersive-header";
+import "bootstrap";
 
 //header
 masthead({
@@ -13,6 +14,6 @@ masthead({
   },
   footerConfig: {
     bgColor: "#0A1633",
-    logoColor: "white"
-  }
+    logoColor: "white",
+  },
 });
