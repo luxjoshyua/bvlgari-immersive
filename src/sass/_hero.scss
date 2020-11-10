@@ -9,4 +9,55 @@
   @include breakpoint(mob-lg){
     top: $masthead-height-mob;
   }
+  .inner{
+    position: relative;
+    min-height: 800px;
+    .copy{
+      position: absolute;
+      right: 105px;
+      bottom: 0;
+    }
+    .letters-wrapper{
+      position: absolute;
+      top: 36px;
+      pointer-events: none;
+      .letters{
+        position: relative;
+        height: 760px;
+        .letter{
+          position: absolute;
+          top: 0;
+          left: 0;
+          &-v{
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+          &-l{
+            left: initial;
+            right: 0;
+          }
+          &-g{
+            top: 50%;
+            transform: translate(0,-50%);
+          }
+          &-a{
+            top: 50%;
+            transform: translate(0,-50%);
+            left: initial;
+            right: 0;
+          }
+          &-r{
+            top: initial;
+            bottom: 0;
+          }
+          &-i{
+            top: initial;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+    }
+  }
 }
