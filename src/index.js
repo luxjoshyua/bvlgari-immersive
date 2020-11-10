@@ -2,6 +2,7 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "./sass/index.scss";
 import "./js/gallery";
+import "./js/gsap";
 import masthead from "nine-immersive-header";
 
 //header
