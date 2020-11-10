@@ -1,19 +1,18 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "./sass/index.scss";
-import "./modal";
+import "./js/gallery";
 import masthead from "nine-immersive-header";
-import "bootstrap";
 
 //header
 masthead({
   headerConfig: {
-    logoColor: "white",
-    bgColor: "#0A1633",
-    textColor: "white",
+    logoColor: "#2D89CE",
+    bgColor: "white",
+    textColor: "#2D89CE",
   },
   footerConfig: {
-    bgColor: "#0A1633",
-    logoColor: "white",
+    bgColor: "white",
+    logoColor: "#2D89CE",
   },
 });

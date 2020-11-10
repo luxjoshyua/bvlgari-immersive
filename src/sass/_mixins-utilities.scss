@@ -28,7 +28,7 @@
   }
 }
 .grid {
-  opacity: 0;
+  opacity: $opacity;
   // display: none;
   position: fixed;
   top: 0;
@@ -372,3 +372,6 @@
   visibility: hidden;
 }
 
+@mixin letter-spacing($spacing) {
+  letter-spacing: ($spacing / 1000) * 1em;
+}

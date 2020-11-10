@@ -1,0 +1,94 @@
+.swiper-container{
+  height: 346px;
+  .swiper-wrapper{
+    display: flex;
+    cursor: grab;
+    .swiper-slide{
+      margin-right: 15px;
+      img{
+        width: 346px;
+        display: block;
+      }
+    }
+  }
+}
+.chapter-2{
+  .swiper-container{
+    overflow: hidden;
+  }
+}
+.chapter-4, .chapter-5{
+  .swiper-overall-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 206px;
+    .swiper-container{
+      width: 1086px;
+      overflow: hidden;
+      height: auto;
+      cursor: grab;
+      .swiper-wrapper{
+        display: flex;
+        .swiper-slide{
+          margin-right: 20px;
+          img{
+            width: 346px;
+            display: block;
+          }
+        }
+      }
+      .swiper-pagination-bullets{
+        height: 9px;
+        position: absolute;
+        bottom: 125px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        .swiper-pagination-bullet {
+          position: relative;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: 1px solid white;
+          display: block;
+          margin: 0 5.5px;
+          &-active{
+            background-color: white;
+          }
+        }
+      }
+      .arrows-wrapper{
+        .arrows-inner{
+          .swiper-button{
+            background: no-repeat center center;
+            background-size: contain;
+            width: 26px;
+            height: 49px;
+            opacity: 0.38;
+            position: absolute;
+            top: 159px;
+            &-prev{
+              background-image: url('../assets/images/arrow-left.svg');
+              left: 15px;
+            }
+            &-next{
+              background-image: url('../assets/images/arrow-right.svg');
+              left: initial;
+              right: 15px;
+            }
+            &:hover{
+              opacity: 1;
+            }
+            &-disabled{
+              opacity: 0.1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/zbi4eag.css");
+
 @mixin font-opentype{
   -moz-font-feature-settings: "liga", "dliga", "kern", "onus";
   -moz-font-feature-settings: "liga=1", "dliga=1", "kern=1", "onus=1";
@@ -11,4 +13,43 @@
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-osx-font-smoothing: auto;
+}
+
+/* font-family: adobe-garamond-pro, serif; */
+/* Regular 400 normal
+Semibold 600 normal
+Semibold Italic 600 italic */
+
+// font-family: futura-pt, sans-serif;
+// font-style: normal;
+
+// font-weight: 300; /* light */
+
+// font-weight: 400; /* book */
+// font-style: normal;
+// font-style: italic;
+
+// font-weight: 600; /* demi */
+// font-style: normal;
+// font-style: italic;
+
+// font-family: lato,sans-serif;
+// font-weight: 600;
+// font-style: normal;
+
+.integration-message{
+  top: 53px;
+  .integration-text{
+    font-size: 0.9rem;
+    @include letter-spacing(40);
+    text-transform: uppercase;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding-bottom: 9px;
+  }
+  .integration-logo{
+    img{
+      width: 130px;
+    }
+  }
 }

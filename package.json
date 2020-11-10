@@ -62,7 +62,8 @@
     "jquery": "^3.5.1",
     "nine-immersive-header": "^0.3.2",
     "popper.js": "^1.16.1",
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.13.5",
+    "swiper": "^6.3.5"
   },
   "browserslist": [
     "last 2 versions"

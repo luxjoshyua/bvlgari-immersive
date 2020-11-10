@@ -3,47 +3,10 @@
   height: $height-100;
   max-height: 1400px;
   top: $masthead-height-desktop;
-  background: $black url('../assets/images/chapter-1-hero-bg.jpg') no-repeat center center;
+  background: $black url('../assets/images/ch1-hero-bg.jpg') no-repeat center center;
   text-align: center;
   background-size: cover;
   @include breakpoint(mob-lg){
     top: $masthead-height-mob;
-  }
-  .inner{
-    h1{
-      font-size: 3rem;
-    }
-    .next {
-      position: absolute;
-      bottom: 30px;
-      left: calc(50% - 25px);
-      width: 50px;
-      height: 50px;
-      display: inline-block;
-      z-index: 2;
-      animation: arrowDown 2s infinite ease-in-out;
-      a {
-        display: block;
-        background: url("../assets/images/down-arrow-white.png") no-repeat center
-          center;
-        background-size: auto 30px;
-        border: none;
-        text-decoration: none;
-        padding: 10px 0;
-      }
-    }
-  }
-}
-
-// arrow pulse
-@keyframes arrowDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
