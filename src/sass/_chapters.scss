@@ -196,3 +196,62 @@
     transform: translate(-50%,0);
   }
 }
+.chapter-5{
+  background: url('../assets/images/ch6-hero-opt.jpg') no-repeat top center;
+  background-size: 100% auto;
+  padding: 1137px 0 0;
+  .inner{
+    .row-1{
+      padding-bottom: 90px;
+      h2{
+        text-align: center;
+        font-size: 25rem;
+        line-height: 0.76em;
+        margin: 0 0 40px;
+      }
+      p{
+        font-size: 2.4rem;
+        line-height: 1.42em;
+        padding: 0 130px;
+        text-align: center;
+      }
+    }
+    .row-2{
+      margin-bottom: 75px;
+    }
+    .row-3{
+      .col{
+        &:first-child{
+          margin-right: 25px;
+        }
+        &:last-child{
+          margin-left: 25px;
+        }
+      }
+      img{
+        margin-top: calc(75px - 1em);
+      }
+      p{
+        &.sub-heading{
+          font-size: 4.5rem;
+          line-height: 1.11em;
+          margin-top: 68px;
+          margin-bottom: 11px;
+          padding-right: 0px;
+          letter-spacing: 0;
+          small{
+            font-family: futura-pt, Arial, Helvetica, sans-serif;
+            font-size: 1.7rem;
+          }
+        }
+        &.attribution{
+          margin-bottom: 41px;
+          font-style: italic;
+        }
+      }
+    }
+    .row-4{
+      margin-top: 99px;
+    }
+  }
+}
