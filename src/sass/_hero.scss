@@ -47,6 +47,9 @@
     @include breakpoint(desk-lg){
       min-height: 480px;
     }
+    @include breakpoint(desk-md){
+      min-height: 510px;
+    }
     .copy{
       position: absolute;
       right: 105px;

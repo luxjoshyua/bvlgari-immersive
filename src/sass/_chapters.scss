@@ -105,10 +105,17 @@
       @include breakpoint(desk-xl){
         font-size: 4.3rem;
       }
+      @include breakpoint(desk-md){
+        font-size: 2.6rem;
+      }
     }
     p{
       text-align: right;
       font-style: italic;
+      @include breakpoint(desk-md){
+        font-size: 1.4rem;
+        line-height: 1.4em;
+      }
     }
   }
 }
@@ -149,6 +156,9 @@
   background: url('../assets/images/ch5-bg.jpg') no-repeat top center;
   background-size: 100% auto;
   padding: 65px 0 119px;
+  @include breakpoint(desk-md){
+    background-size: 1920px auto;
+  }
   .inner{
     position: relative;
     h2{
@@ -156,6 +166,9 @@
       font-size: 25rem;
       line-height: 1em;
       margin: 0 0 48px;
+      @include breakpoint(desk-md){
+        font-size: 20rem;
+      }
       .large-heading{
         display: block;
         &:first-child{
@@ -219,6 +232,9 @@
   }
   @include breakpoint(desk-lg){
     padding-top: 750px !important;
+  }
+  @include breakpoint(desk-md){
+    background-position: top center, 500% 2000px;
   }
   .inner{
     .row-1{
