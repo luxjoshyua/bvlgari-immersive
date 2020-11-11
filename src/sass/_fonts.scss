@@ -72,3 +72,22 @@ h1{
   text-align: left;
   margin: 0;
 }
+.font-agp{
+  font-family: adobe-garamond-pro, Georgia, 'Times New Roman', Times, serif;
+}
+.chapter-2{
+  h2{
+    font-family: futura-pt, Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    .font-agp{
+      margin: 21px 0 11px;
+      display: block;
+      color: $clay;
+      font-size: 7rem;
+      line-height: 1.13em;
+    }
+  }
+}
