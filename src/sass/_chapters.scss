@@ -104,7 +104,34 @@
   }
 }
 .chapter-3{
-  
+  background: url('../assets/images/ch4-bg.jpg') no-repeat top center;
+  background-size: 100% auto;
+  padding-top: 547px;
+  padding-bottom: 0px;
+  .inner{
+    align-items: flex-end !important;
+    .row-1{
+      margin-right: 105px;
+      h2,p{
+        padding-left: 15px;
+      }
+      h2{
+        font-size: 10rem;
+        line-height: 1.1em;
+        margin: 0;
+        margin-bottom: 24px;
+      }
+      p{
+        .sub-heading{
+          font-size: 2.4rem;
+          line-height: 1.42em;
+        }
+      }
+    }
+    .row-2{
+      margin-top: 133px;
+    }
+  }
 }
 .chapter-4{
   
