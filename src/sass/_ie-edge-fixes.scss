@@ -32,6 +32,12 @@
       }
     }
   }
+  .swiper-container{
+    width: 200%;
+  }
+  .chapter-4 .swiper-overall-wrapper .swiper-container .swiper-wrapper, .chapter-5 .swiper-overall-wrapper .swiper-container .swiper-wrapper{
+    width: 400%;
+  }
   footer.integration-message{
     top: auto;
   }
