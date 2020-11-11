@@ -127,6 +127,11 @@
   @include breakpoint(desk-xl){
     background-size: 1920px auto;
   }
+  @include breakpoint(desk-md){
+    padding-top: 300px;
+    background-size: 1920px auto;
+    background-position: 50% -200px;
+  }
   .inner{
     align-items: flex-end !important;
     .row-1{
