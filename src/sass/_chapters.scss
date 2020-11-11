@@ -107,7 +107,7 @@
   background: url('../assets/images/ch4-bg.jpg') no-repeat top center;
   background-size: 100% auto;
   padding-top: 547px;
-  padding-bottom: 0px;
+  padding-bottom: 189px;
   .inner{
     align-items: flex-end !important;
     .row-1{
@@ -134,5 +134,65 @@
   }
 }
 .chapter-4{
-  
+  background: url('../assets/images/ch5-bg.jpg') no-repeat top center;
+  background-size: 100% auto;
+  padding: 65px 0 119px;
+  .inner{
+    position: relative;
+    h2{
+      text-align: center;
+      font-size: 25rem;
+      line-height: 1em;
+      margin: 0 0 48px;
+      .large-heading{
+        display: block;
+        &:first-child{
+          margin-bottom: 465px;
+        }
+      }
+    }
+    .row-1{
+      position: relative;
+      z-index: 100;
+      p{
+        &.sub-heading{
+          font-size: 2.4rem;
+          line-height: 1.42em;
+          text-align: center;
+          @include letter-spacing(20);
+          margin-bottom: 354px;
+        }
+      }
+    }
+    .row-2{
+      .col{
+        &:first-child{
+          padding-right: 29px;
+        }
+        &:last-child{
+          padding-left: 29px;
+        }
+      }
+      p{
+        &.sub-heading{
+          font-size: 4.5rem;
+          line-height: 1.11em;
+          margin-top: 31px;
+          margin-bottom: 11px;
+        }
+        &.attribution{
+          margin-bottom: 41px;
+        }
+      }
+    }
+    .row-3{
+      margin-top: 88px;
+    }
+  }
+  .watch{
+    position: absolute;
+    bottom: -310px;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
 }
