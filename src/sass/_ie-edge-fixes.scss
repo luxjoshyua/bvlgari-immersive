@@ -3,6 +3,38 @@
   .masthead .share-icons .icon svg{
     width: 20px;
   }
+  .hero{
+    .inner{
+      .copy{
+        width: auto;
+      }
+      .letters-wrapper{
+        left: 0;
+        width: 100%;
+        .letters{
+          transform: translate(-50%, 0px);
+          left: 50%;
+          .letter{
+            &-l{
+              left: auto;
+            }
+            &-a{
+              left: auto;
+            }
+            &-r{
+              top: auto;
+            }
+            &-i{
+              top: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer.integration-message{
+    top: auto;
+  }
 }
 
 // Write Edge hacks here
