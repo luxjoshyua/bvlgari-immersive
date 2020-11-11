@@ -7,7 +7,6 @@
   top: 0px;
   left: 0;
   right: 0;
-  opacity: 0;
   height: auto;
   z-index: 10;
   display: block;
@@ -47,7 +46,9 @@ header {
 }
 footer {
   &.integration-message {
-    position: relative;
-    padding: 100px 0;
+    position: absolute;
+    top: initial;
+    bottom: 0;
+    padding: 0px 0 51px;
   }
 }
