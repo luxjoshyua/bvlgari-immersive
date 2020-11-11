@@ -32,7 +32,7 @@
   }
   .inner{
     position: relative;
-    min-height: 800px;
+    min-height: 750px;
     .copy{
       position: absolute;
       right: 105px;
@@ -44,7 +44,7 @@
       pointer-events: none;
       .letters{
         position: relative;
-        height: 760px;
+        height: 710px;
         .letter{
           opacity: 0;
           position: absolute;
