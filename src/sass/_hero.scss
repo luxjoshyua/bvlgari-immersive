@@ -28,15 +28,29 @@
       opacity: 1;
       transition: all 2s ease-in-out;
       transform: scale(1);
+      @include breakpoint(desk-xl){
+        background-size: 90%;
+      }
     }
   }
   .inner{
     position: relative;
     min-height: 750px;
+    @include breakpoint(desk-xl){
+      min-height: 550px;
+    }
     .copy{
       position: absolute;
       right: 105px;
       bottom: 0;
+      @include breakpoint(desk-xl){
+        right: 185px;
+      }
+      h1{
+        @include breakpoint(desk-xl){
+          font-size: 3.8rem;
+        }
+      }
     }
     .letters-wrapper{
       position: absolute;
@@ -45,11 +59,20 @@
       .letters{
         position: relative;
         height: 710px;
+        @include breakpoint(desk-xl){
+          height: 500px;
+          width: calc(1240px / 12 * 7);
+        }
         .letter{
           opacity: 0;
           position: absolute;
           top: 0;
           left: 20px;
+          img{
+            @include breakpoint(desk-xl){
+              width: 70%;
+            }
+          }
           &-v{
             left: 50%;
             transform: translate(-50%, 0);
