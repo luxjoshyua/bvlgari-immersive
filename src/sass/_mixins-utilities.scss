@@ -5,6 +5,18 @@
   margin: 0 auto;
 }
 
+.hide-desktop {
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.hide-small {
+  @media screen and (max-width: $tablet) {
+    display: none !important;
+  }
+}
+
 .reader-only {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -377,7 +389,7 @@
 @mixin letter-spacing($spacing) {
   letter-spacing: ($spacing / 1000) * 1em;
 }
-.dropcap{
+.dropcap {
   font-size: 6rem;
   line-height: 0.8em;
   display: block;

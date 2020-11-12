@@ -9,183 +9,213 @@
     margin: 0 auto;
   }
 }
-.chapter-2{
+.chapter-2 {
   padding-bottom: 172px;
-  .ch2-bg{
+  .ch2-bg {
     height: 100vh;
     min-height: 800px;
     max-height: 1200px;
     position: relative;
     display: block;
-    @include breakpoint(desk-xl){
+    @include breakpoint(desk-xl) {
       min-height: 700px;
     }
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       width: 100%;
       height: 100%;
       position: absolute;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.7);
       top: 0;
       left: 0;
       z-index: 100;
     }
-    .inner{
+    .inner {
       position: absolute;
       z-index: 1000;
       text-align: center;
       max-width: 100%;
       top: 50%;
-      transform: translate(0,-50%);
+      transform: translate(0, -50%);
     }
-    .video-wrapper{
+    .video-wrapper {
       width: 100%;
       height: 100%;
       object-fit: cover;
       pointer-events: none;
-      .video-js{
+      .video-js {
         height: 100%;
         object-fit: cover;
         padding-top: 0;
       }
-      .vjs-tech{
+      .vjs-tech {
         height: 100%;
         object-fit: cover;
         padding-top: 0;
       }
-      .vjs-control-bar{
+      .vjs-control-bar {
         display: none;
       }
     }
   }
-  .ch2-bg-2{
+  .ch2-bg-2 {
     padding-top: 113px;
-    background: url('../assets/images/ch3-bg-2.png') no-repeat 100% 1100px, url('../assets/images/ch3-bg-2.jpg') no-repeat top center;
-    @include breakpoint(desk-xl){
+    background: url("../assets/images/ch3-bg-2.png") no-repeat 100% 1100px,
+      url("../assets/images/ch3-bg-2.jpg") no-repeat top center;
+    @include breakpoint(desk-xl) {
       background-position: 130% 1100px, top center;
     }
-    .row-1{
-      transform: translate(105px,0);
-      p{
-        padding-right:15px;
+    @include breakpoint(tablet) {
+      padding-top: 27.5px;
+      background: url("../assets/images/ch3-bg-2.jpg") no-repeat center;
+      background-size: contain;
+    }
+
+    .row-1 {
+      transform: translate(105px, 0);
+      @include breakpoint(tablet) {
+        transform: translate(0, 0);
+      }
+      .col-5 {
+        @include breakpoint(tablet) {
+          width: 100%;
+        }
+      }
+
+      p {
+        padding-right: 15px;
         font-size: 2.4rem;
         line-height: 1.42em;
         @include letter-spacing(20);
-        strong{
+        strong {
           font-weight: 600;
           @include letter-spacing(5);
         }
+        @include breakpoint(tablet) {
+          padding-right: 0;
+        }
       }
-      img{
-        transform: translate(35px,0);
+      img {
+        transform: translate(35px, 0);
+        @include breakpoint(tablet) {
+          transform: translate(0, 0);
+        }
       }
     }
-    .row-2{
+    .row-2 {
       margin-top: 555px;
       margin-bottom: 93px;
-      p{
+      p {
         padding-right: 10px;
       }
     }
+    .row-2-small {
+      padding-top: 550px;
+      align-items: center !important;
+      .img-outer {
+        padding: 40px 0;
+      }
+    }
   }
-  .row-3{
+  .row-3 {
     justify-content: flex-end;
-    .col-5{
+    .col-5 {
       padding-right: 42px;
     }
-    .swiper-container{
+    .swiper-container {
       margin-top: 15px;
     }
-    h3{
+    h3 {
       font-size: 4.5rem;
       line-height: 1.11em;
       text-align: right;
       margin-top: 0;
       margin-bottom: 15px;
-      @include breakpoint(desk-xl){
+      @include breakpoint(desk-xl) {
         font-size: 4.3rem;
       }
-      @include breakpoint(desk-md){
+      @include breakpoint(desk-md) {
         font-size: 2.6rem;
       }
     }
-    p{
+    p {
       text-align: right;
       font-style: italic;
-      @include breakpoint(desk-md){
+      @include breakpoint(desk-md) {
         font-size: 1.4rem;
         line-height: 1.4em;
       }
     }
   }
 }
-.chapter-3{
-  background: url('../assets/images/ch4-bg.jpg') no-repeat top center;
+.chapter-3 {
+  background: url("../assets/images/ch4-bg.jpg") no-repeat top center;
   background-size: 100% auto;
   padding-top: 547px;
   padding-bottom: 189px;
-  @include breakpoint(desk-xl){
+  @include breakpoint(desk-xl) {
     background-size: 1920px auto;
   }
-  @include breakpoint(desk-md){
+  @include breakpoint(desk-md) {
     padding-top: 300px;
     background-size: 1920px auto;
     background-position: 50% -200px;
   }
-  .inner{
+  .inner {
     align-items: flex-end !important;
-    .row-1{
+    .row-1 {
       margin-right: 105px;
-      h2,p{
+      h2,
+      p {
         padding-left: 15px;
       }
-      h2{
+      h2 {
         font-size: 10rem;
         line-height: 1.1em;
         margin: 0;
         margin-bottom: 24px;
       }
-      p{
-        .sub-heading{
+      p {
+        .sub-heading {
           font-size: 2.4rem;
           line-height: 1.42em;
         }
       }
     }
-    .row-2{
+    .row-2 {
       margin-top: 133px;
     }
   }
 }
-.chapter-4{
-  background: url('../assets/images/ch5-bg.jpg') no-repeat top center;
+.chapter-4 {
+  background: url("../assets/images/ch5-bg.jpg") no-repeat top center;
   background-size: 100% auto;
   padding: 65px 0 119px;
-  @include breakpoint(desk-md){
+  @include breakpoint(desk-md) {
     background-size: 1920px auto;
   }
-  .inner{
+  .inner {
     position: relative;
-    h2{
+    h2 {
       text-align: center;
       font-size: 25rem;
       line-height: 1em;
       margin: 0 0 48px;
-      @include breakpoint(desk-md){
+      @include breakpoint(desk-md) {
         font-size: 20rem;
       }
-      .large-heading{
+      .large-heading {
         display: block;
-        &:first-child{
+        &:first-child {
           margin-bottom: 465px;
         }
       }
     }
-    .row-1{
+    .row-1 {
       position: relative;
       z-index: 100;
-      p{
-        &.sub-heading{
+      p {
+        &.sub-heading {
           font-size: 2.4rem;
           line-height: 1.42em;
           text-align: center;
@@ -194,116 +224,116 @@
         }
       }
     }
-    .row-2{
-      .col{
-        &:first-child{
+    .row-2 {
+      .col {
+        &:first-child {
           padding-right: 29px;
         }
-        &:last-child{
+        &:last-child {
           padding-left: 29px;
         }
       }
-      p{
-        &.sub-heading{
+      p {
+        &.sub-heading {
           font-size: 4.5rem;
           line-height: 1.11em;
           margin-top: 31px;
           margin-bottom: 11px;
         }
-        &.attribution{
+        &.attribution {
           margin-bottom: 41px;
         }
       }
     }
-    .row-3{
+    .row-3 {
       margin-top: 88px;
     }
   }
-  .watch{
+  .watch {
     position: absolute;
     bottom: -310px;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
 }
-.chapter-5{
-  background: url('../assets/images/ch6-hero-opt.jpg') no-repeat top center,
-  url('../assets/images/ch6-bg.jpg') no-repeat 100% 2000px;
+.chapter-5 {
+  background: url("../assets/images/ch6-hero-opt.jpg") no-repeat top center,
+    url("../assets/images/ch6-bg.jpg") no-repeat 100% 2000px;
   background-size: 100% auto, auto;
   padding: 1137px 0 0 !important;
-  @include breakpoint(desk-xl){
+  @include breakpoint(desk-xl) {
     padding-top: 750px !important;
     background-position: top center, 200% 2000px;
   }
-  @include breakpoint(desk-lg){
+  @include breakpoint(desk-lg) {
     padding-top: 750px !important;
   }
-  @include breakpoint(desk-md){
+  @include breakpoint(desk-md) {
     background-position: top center, 500% 2000px;
   }
-  .inner{
-    .row-1{
+  .inner {
+    .row-1 {
       padding-bottom: 90px;
-      h2{
+      h2 {
         text-align: center;
         font-size: 25rem;
         line-height: 0.76em;
         margin: 0 0 40px;
       }
-      p{
+      p {
         font-size: 2.4rem;
         line-height: 1.42em;
         padding: 0 130px;
         text-align: center;
       }
     }
-    .row-2{
+    .row-2 {
       margin-bottom: 75px;
     }
-    .row-3{
-      .col{
-        &:first-child{
+    .row-3 {
+      .col {
+        &:first-child {
           margin-right: 25px;
         }
-        &:last-child{
+        &:last-child {
           margin-left: 25px;
         }
       }
-      img{
+      img {
         margin-top: calc(75px - 1em);
       }
-      p{
-        &.sub-heading{
+      p {
+        &.sub-heading {
           font-size: 4.5rem;
           line-height: 1.11em;
           margin-top: 68px;
           margin-bottom: 11px;
           padding-right: 0px;
           letter-spacing: 0;
-          small{
+          small {
             font-family: futura-pt, Arial, Helvetica, sans-serif;
             font-size: 1.7rem;
           }
         }
-        &.attribution{
+        &.attribution {
           margin-bottom: 41px;
           font-style: italic;
         }
       }
     }
-    .row-4{
+    .row-4 {
       margin-top: 99px;
     }
   }
-  .row-5{
-    background: url('../assets/images/ch8-bg.jpg') no-repeat top center;
+  .row-5 {
+    background: url("../assets/images/ch8-bg.jpg") no-repeat top center;
     background-size: cover;
     padding: 80px 0 0;
-    .inner{
-      .col{
+    .inner {
+      .col {
         padding-bottom: 635px;
         text-align: center;
-        p{
+        p {
           font-size: 2.4rem;
           line-height: 1.42em;
           text-align: center;
