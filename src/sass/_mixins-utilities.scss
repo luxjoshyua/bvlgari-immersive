@@ -117,6 +117,9 @@
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: calc(#{$max-width} / 12 * #{$i});
+    @include breakpoint(tablet) {
+      max-width: 100%;
+    }
   }
 }
 @for $i from 1 through 12 {

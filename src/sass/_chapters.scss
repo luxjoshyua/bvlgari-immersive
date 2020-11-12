@@ -357,6 +357,9 @@
         line-height: 1.42em;
         padding: 0 130px;
         text-align: center;
+        @include breakpoint(tablet) {
+          padding: 0;
+        }
       }
       .col-10 {
         @include breakpoint(tablet) {
@@ -368,16 +371,36 @@
       margin-bottom: 75px;
     }
     .row-3 {
+      @include breakpoint(tablet) {
+        align-items: center !important;
+      }
       .col {
         &:first-child {
           margin-right: 25px;
+          @include breakpoint(tablet) {
+            margin-right: 0;
+            width: 100%;
+          }
         }
         &:last-child {
           margin-left: 25px;
+          @include breakpoint(tablet) {
+            margin-left: 0;
+            width: 100%;
+          }
+          @include breakpoint(tablet) {
+            display: flex;
+            flex-direction: column-reverse;
+          }
         }
       }
       img {
         margin-top: calc(75px - 1em);
+        @include breakpoint(tablet) {
+          width: 100%;
+          margin-top: 43px;
+          margin-bottom: 36.7px;
+        }
       }
       p {
         &.sub-heading {
@@ -387,6 +410,10 @@
           margin-bottom: 11px;
           padding-right: 0px;
           letter-spacing: 0;
+          @include breakpoint(tablet) {
+            margin-top: 36px;
+            margin-bottom: 0;
+          }
           small {
             font-family: futura-pt, Arial, Helvetica, sans-serif;
             font-size: 1.7rem;
@@ -406,10 +433,26 @@
     background: url("../assets/images/ch8-bg.jpg") no-repeat top center;
     background-size: cover;
     padding: 80px 0 0;
+    @include breakpoint(tablet) {
+      padding: 80px 0 300px;
+    }
     .inner {
       .col {
         padding-bottom: 635px;
         text-align: center;
+        p {
+          font-size: 2.4rem;
+          line-height: 1.42em;
+          text-align: center;
+          letter-spacing: 0;
+          margin-bottom: 40px;
+        }
+      }
+      .copy-outer {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         p {
           font-size: 2.4rem;
           line-height: 1.42em;

@@ -15,8 +15,34 @@
 .chapter-2 {
   .swiper-container {
     overflow: hidden;
+    .swiper-pagination-bullets {
+      height: 9px;
+      position: absolute;
+      bottom: 125px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      .swiper-pagination-bullet {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: block;
+        margin: 0 5.5px;
+        &-active {
+          background-color: white;
+        }
+      }
+    }
   }
 }
+
 .chapter-4,
 .chapter-5 {
   .swiper-overall-wrapper {
