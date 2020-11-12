@@ -119,8 +119,18 @@
   }
   .row-3 {
     justify-content: flex-end;
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+    }
     .col-5 {
       padding-right: 42px;
+      @include breakpoint(tablet) {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 40px;
+      }
     }
     .swiper-container {
       margin-top: 15px;
@@ -137,6 +147,10 @@
       @include breakpoint(desk-md) {
         font-size: 2.6rem;
       }
+      @include breakpoint(tablet) {
+        text-align: left;
+        font-size: 3.5rem;
+      }
     }
     p {
       text-align: right;
@@ -144,6 +158,9 @@
       @include breakpoint(desk-md) {
         font-size: 1.4rem;
         line-height: 1.4em;
+      }
+      @include breakpoint(tablet) {
+        text-align: left;
       }
     }
   }
@@ -161,13 +178,25 @@
     background-size: 1920px auto;
     background-position: 50% -200px;
   }
+  @include breakpoint(tablet) {
+    background-size: 1260px auto;
+    background-position: 20% -120px;
+    padding-top: 540px;
+    padding-bottom: 96px;
+  }
   .inner {
     align-items: flex-end !important;
     .row-1 {
       margin-right: 105px;
+      @include breakpoint(tablet) {
+        margin-right: 0;
+      }
       h2,
       p {
         padding-left: 15px;
+        @include breakpoint(tablet) {
+          padding-left: 0;
+        }
       }
       h2 {
         font-size: 10rem;
@@ -184,6 +213,14 @@
     }
     .row-2 {
       margin-top: 133px;
+      @include breakpoint(tablet) {
+        margin-top: 60px;
+      }
+      .col-12 {
+        @include breakpoint(tablet) {
+          max-width: 100%;
+        }
+      }
     }
   }
 }
@@ -193,6 +230,10 @@
   padding: 65px 0 119px;
   @include breakpoint(desk-md) {
     background-size: 1920px auto;
+  }
+  @include breakpoint(tablet) {
+    padding: 0;
+    background-size: 1080px auto;
   }
   .inner {
     position: relative;
@@ -209,11 +250,15 @@
         &:first-child {
           margin-bottom: 465px;
         }
+        @include breakpoint(tablet) {
+          font-size: 8rem;
+        }
       }
     }
     .row-1 {
       position: relative;
       z-index: 100;
+
       p {
         &.sub-heading {
           font-size: 2.4rem;
@@ -223,14 +268,28 @@
           margin-bottom: 354px;
         }
       }
+      .col-8 {
+        @include breakpoint(tablet) {
+          max-width: 100%;
+        }
+      }
     }
     .row-2 {
       .col {
         &:first-child {
           padding-right: 29px;
+          @include breakpoint(tablet) {
+            padding-right: 0;
+          }
         }
         &:last-child {
           padding-left: 29px;
+          @include breakpoint(tablet) {
+            padding-left: 0;
+          }
+        }
+        @include breakpoint(tablet) {
+          width: 100%;
         }
       }
       p {
@@ -247,6 +306,9 @@
     }
     .row-3 {
       margin-top: 88px;
+      @include breakpoint(tablet) {
+        align-items: center !important;
+      }
     }
   }
   .watch {
@@ -271,20 +333,35 @@
   @include breakpoint(desk-md) {
     background-position: top center, 500% 2000px;
   }
+  @include breakpoint(tablet) {
+    padding: 460px 0 0 !important;
+  }
   .inner {
     .row-1 {
       padding-bottom: 90px;
+      @include breakpoint(tablet) {
+        max-width: 100%;
+        align-items: center !important;
+      }
       h2 {
         text-align: center;
         font-size: 25rem;
         line-height: 0.76em;
         margin: 0 0 40px;
+        @include breakpoint(tablet) {
+          font-size: 8rem;
+        }
       }
       p {
         font-size: 2.4rem;
         line-height: 1.42em;
         padding: 0 130px;
         text-align: center;
+      }
+      .col-10 {
+        @include breakpoint(tablet) {
+          padding: 0 50px;
+        }
       }
     }
     .row-2 {

@@ -1,44 +1,48 @@
-.swiper-container{
+.swiper-container {
   height: 346px;
-  .swiper-wrapper{
+  .swiper-wrapper {
     display: flex;
     cursor: grab;
-    .swiper-slide{
+    .swiper-slide {
       margin-right: 15px;
-      img{
+      img {
         width: 346px;
         display: block;
       }
     }
   }
 }
-.chapter-2{
-  .swiper-container{
+.chapter-2 {
+  .swiper-container {
     overflow: hidden;
   }
 }
-.chapter-4, .chapter-5{
-  .swiper-overall-wrapper{
+.chapter-4,
+.chapter-5 {
+  .swiper-overall-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
     padding-bottom: 206px;
-    .swiper-container{
+    @include breakpoint(tablet) {
+      padding-bottom: 170px;
+    }
+    .swiper-container {
       width: 1086px;
       overflow: hidden;
       height: auto;
       cursor: grab;
-      .swiper-wrapper{
+      .swiper-wrapper {
         display: flex;
-        .swiper-slide{
+        .swiper-slide {
           margin-right: 20px;
-          img{
+          img {
             width: 346px;
             display: block;
           }
         }
       }
-      .swiper-pagination-bullets{
+      .swiper-pagination-bullets {
         height: 9px;
         position: absolute;
         bottom: 125px;
@@ -56,14 +60,14 @@
           border: 1px solid white;
           display: block;
           margin: 0 5.5px;
-          &-active{
+          &-active {
             background-color: white;
           }
         }
       }
-      .arrows-wrapper{
-        .arrows-inner{
-          .swiper-button{
+      .arrows-wrapper {
+        .arrows-inner {
+          .swiper-button {
             background: no-repeat center center;
             background-size: contain;
             width: 26px;
@@ -71,19 +75,19 @@
             opacity: 0.38;
             position: absolute;
             top: 159px;
-            &-prev{
-              background-image: url('../assets/images/arrow-left.svg');
+            &-prev {
+              background-image: url("../assets/images/arrow-left.svg");
               left: 15px;
             }
-            &-next{
-              background-image: url('../assets/images/arrow-right.svg');
+            &-next {
+              background-image: url("../assets/images/arrow-right.svg");
               left: initial;
               right: 15px;
             }
-            &:hover{
+            &:hover {
               opacity: 1;
             }
-            &-disabled{
+            &-disabled {
               opacity: 0.1;
             }
           }
@@ -92,11 +96,11 @@
     }
   }
 }
-.chapter-5{
+.chapter-5 {
   padding-bottom: 38px;
-  .swiper-overall-wrapper{
+  .swiper-overall-wrapper {
     padding-bottom: 120px;
-    .swiper-pagination-bullets{
+    .swiper-pagination-bullets {
       bottom: 38px !important;
     }
   }
