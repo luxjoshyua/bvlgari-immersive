@@ -41,6 +41,6 @@ main {
 
 img {
   @include breakpoint(mob-lg) {
-    height: auto !important;
+    align-self: center;
   }
 }
