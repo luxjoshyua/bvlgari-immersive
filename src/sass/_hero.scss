@@ -55,7 +55,7 @@
       min-height: 480px;
     }
     @include breakpoint(desk-md) {
-      min-height: 510px;
+      min-height: 450px;
     }
     .copy {
       position: absolute;
@@ -106,6 +106,9 @@
         @include breakpoint(desk-lg) {
           height: 450px;
         }
+        @include breakpoint(mob-lg) {
+          height: 390px;
+        }
         .letter {
           opacity: 0;
           position: absolute;
@@ -124,6 +127,7 @@
             }
             @include breakpoint(mob-lg) {
               width: 40%;
+              align-self: center;
             }
           }
           &-b {

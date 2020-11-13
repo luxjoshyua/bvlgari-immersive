@@ -110,7 +110,8 @@
           transform: translate(0, 0);
         }
         @include breakpoint(mob-lg) {
-          max-width: 160px;
+          max-width: 320px;
+          align-self: center;
         }
       }
     }
@@ -125,7 +126,7 @@
       padding-top: 550px;
       align-items: center !important;
       @include breakpoint(mob-lg) {
-        padding-top: 380px;
+        padding-top: 180px;
       }
       .img-outer {
         padding: 40px 0;
@@ -485,6 +486,7 @@
         @include breakpoint(mob-lg) {
           max-width: 252px;
           margin-top: 0;
+          align-self: center;
         }
       }
       p {
