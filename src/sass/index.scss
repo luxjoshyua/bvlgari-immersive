@@ -38,3 +38,9 @@ main {
 * {
   box-sizing: border-box;
 }
+
+img {
+  @include breakpoint(mob-lg) {
+    height: auto !important;
+  }
+}
