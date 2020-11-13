@@ -10,6 +10,10 @@ new Swiper(".chapter-2 .swiper-container", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
   },
   keyboard: {
     enabled: true,
@@ -32,6 +36,10 @@ new Swiper(".chapter-4 .swiper-container", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
+    500: {
+      slidesPerView: 3,
+      // spaceBetween: 20,
+    },
   },
   keyboard: {
     enabled: true,
@@ -53,6 +61,10 @@ new Swiper(".chapter-5 .swiper-container", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
+    },
+    500: {
+      slidesPerView: 3,
+      // spaceBetween: 20,
     },
   },
   keyboard: {
