@@ -126,6 +126,10 @@
   padding-bottom: 38px;
   .swiper-overall-wrapper {
     padding-bottom: 120px;
+    @include breakpoint(mob-lg) {
+      padding-bottom: 80px;
+    }
+
     .swiper-pagination-bullets {
       bottom: 38px !important;
     }

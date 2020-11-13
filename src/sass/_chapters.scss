@@ -396,6 +396,7 @@
   }
   @include breakpoint(mob-lg) {
     background-size: 220% auto, auto;
+    padding: 480px 0 0 !important;
   }
   .inner {
     .row-1 {
@@ -403,6 +404,9 @@
       @include breakpoint(tablet) {
         max-width: 100%;
         align-items: center !important;
+      }
+      @include breakpoint(mob-lg) {
+        padding-bottom: 54px;
       }
       h2 {
         text-align: center;
@@ -421,6 +425,10 @@
         @include breakpoint(tablet) {
           padding: 0;
         }
+        @include breakpoint(mob-lg) {
+          text-align: left;
+          font-size: 1.8rem;
+        }
       }
       .col-10 {
         @include breakpoint(tablet) {
@@ -433,6 +441,9 @@
     }
     .row-2 {
       margin-bottom: 75px;
+      @include breakpoint(mob-lg) {
+        margin-bottom: 54px;
+      }
     }
     .row-3 {
       @include breakpoint(tablet) {
@@ -456,6 +467,12 @@
             display: flex;
             flex-direction: column-reverse;
           }
+          .img-wrapper {
+            @include breakpoint(mob-lg) {
+              display: flex;
+              justify-content: center;
+            }
+          }
         }
       }
       img {
@@ -464,6 +481,10 @@
           width: 100%;
           margin-top: 43px;
           margin-bottom: 36.7px;
+        }
+        @include breakpoint(mob-lg) {
+          max-width: 252px;
+          margin-top: 0;
         }
       }
       p {
@@ -478,19 +499,31 @@
             margin-top: 36px;
             margin-bottom: 0;
           }
+          @include breakpoint(mob-lg) {
+            font-size: 3.5rem;
+          }
           small {
             font-family: futura-pt, Arial, Helvetica, sans-serif;
             font-size: 1.7rem;
+            @include breakpoint(mob-lg) {
+              display: block;
+            }
           }
         }
         &.attribution {
           margin-bottom: 41px;
           font-style: italic;
+          @include breakpoint(mob-lg) {
+            font-size: 1.3rem;
+          }
         }
       }
     }
     .row-4 {
       margin-top: 99px;
+      @include breakpoint(mob-lg) {
+        margin-top: 44px;
+      }
     }
   }
   .row-5 {
@@ -517,12 +550,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include breakpoint(mob-lg) {
+          padding: 0 20px;
+        }
         p {
           font-size: 2.4rem;
           line-height: 1.42em;
           text-align: center;
           letter-spacing: 0;
           margin-bottom: 40px;
+          @include breakpoint(mob-lg) {
+            font-size: 2.1rem;
+          }
         }
       }
     }
