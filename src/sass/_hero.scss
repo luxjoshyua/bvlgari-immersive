@@ -55,6 +55,9 @@
       min-height: 480px;
     }
     @include breakpoint(desk-md) {
+      min-height: 510px;
+    }
+    @include breakpoint(mob-lg) {
       min-height: 450px;
     }
     .copy {
