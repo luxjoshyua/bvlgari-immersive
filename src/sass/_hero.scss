@@ -40,6 +40,9 @@
       @include breakpoint(tablet) {
         background-size: auto;
       }
+      @include breakpoint(mob-lg) {
+        background-size: cover;
+      }
     }
   }
   .inner {
@@ -81,6 +84,9 @@
         @include breakpoint(tablet) {
           text-align: center;
         }
+        @include breakpoint(mob-lg) {
+          font-size: 3rem;
+        }
       }
     }
     .letters-wrapper {
@@ -105,12 +111,24 @@
           position: absolute;
           top: 0;
           left: 20px;
+          @include breakpoint(mob-lg) {
+            width: fit-content;
+            left: 0;
+          }
           img {
             @include breakpoint(desk-xl) {
               width: 70%;
             }
             @include breakpoint(desk-lg) {
               width: 60%;
+            }
+            @include breakpoint(mob-lg) {
+              width: 40%;
+            }
+          }
+          &-b {
+            @include breakpoint(mob-lg) {
+              display: flex;
             }
           }
           &-v {
@@ -120,20 +138,37 @@
           &-l {
             left: initial;
             right: 20px;
+            @include breakpoint(mob-lg) {
+              display: flex;
+              justify-content: flex-end;
+              right: 0;
+            }
           }
           &-g {
             top: 50%;
             transform: translate(0, -50%);
+            @include breakpoint(mob-lg) {
+              display: flex;
+            }
           }
           &-a {
             top: 50%;
             transform: translate(0, -50%);
             left: initial;
             right: 20px;
+            @include breakpoint(mob-lg) {
+              display: flex;
+              justify-content: flex-end;
+              right: 0;
+            }
           }
           &-r {
             top: initial;
             bottom: 0;
+            @include breakpoint(mob-lg) {
+              display: flex;
+              bottom: 8px;
+            }
           }
           &-i {
             top: initial;

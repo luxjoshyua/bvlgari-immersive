@@ -8,6 +8,7 @@ new Swiper(".chapter-2 .swiper-container", {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
+      spaceBetween: 20,
     },
   },
   keyboard: {

@@ -94,12 +94,18 @@ h1 {
     line-height: 1.5em;
     font-weight: 400;
     margin: 0;
+    @include breakpoint(mob-lg) {
+      font-size: 1.8rem;
+    }
     .font-agp {
       margin: 21px 0 11px;
       display: block;
       color: $clay;
       font-size: 7rem;
       line-height: 1.13em;
+      @include breakpoint(mob-lg) {
+        font-size: 3.5rem;
+      }
     }
   }
 }

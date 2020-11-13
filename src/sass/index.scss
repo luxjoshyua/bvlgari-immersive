@@ -25,8 +25,12 @@ body {
   letter-spacing: 0.4px;
   @include font-opentype;
   @include font-smoothing;
+  @include breakpoint(mob-lg) {
+    font-size: 1.7rem;
+    line-height: 1.4em;
+  }
 }
-main{
+main {
   overflow: hidden;
   position: relative;
 }

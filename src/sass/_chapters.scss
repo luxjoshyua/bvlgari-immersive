@@ -70,6 +70,10 @@
       background: url("../assets/images/ch3-bg-2.jpg") no-repeat center;
       background-size: contain;
     }
+    @include breakpoint(mob-lg) {
+      background-size: 340% auto;
+      background-position: 40% 10%;
+    }
 
     .row-1 {
       transform: translate(105px, 0);
@@ -81,7 +85,12 @@
           width: 100%;
         }
       }
-
+      .col-7 {
+        @include breakpoint(mob-lg) {
+          display: flex;
+          justify-content: center;
+        }
+      }
       p {
         padding-right: 15px;
         font-size: 2.4rem;
@@ -100,6 +109,9 @@
         @include breakpoint(tablet) {
           transform: translate(0, 0);
         }
+        @include breakpoint(mob-lg) {
+          max-width: 160px;
+        }
       }
     }
     .row-2 {
@@ -112,8 +124,16 @@
     .row-2-small {
       padding-top: 550px;
       align-items: center !important;
+      @include breakpoint(mob-lg) {
+        padding-top: 380px;
+      }
       .img-outer {
         padding: 40px 0;
+        img {
+          @include breakpoint(mob-lg) {
+            max-width: 265px;
+          }
+        }
       }
     }
   }
@@ -184,6 +204,11 @@
     padding-top: 540px;
     padding-bottom: 96px;
   }
+  @include breakpoint(mob-lg) {
+    background-size: 700px auto;
+    background-position: 20% -80px;
+    padding-top: 320px;
+  }
   .inner {
     align-items: flex-end !important;
     .row-1 {
@@ -203,6 +228,9 @@
         line-height: 1.1em;
         margin: 0;
         margin-bottom: 24px;
+        @include breakpoint(mob-lg) {
+          font-size: 8rem;
+        }
       }
       p {
         .sub-heading {
@@ -245,10 +273,16 @@
       @include breakpoint(desk-md) {
         font-size: 20rem;
       }
+      @include breakpoint(mob-lg) {
+        margin: 0;
+      }
       .large-heading {
         display: block;
         &:first-child {
           margin-bottom: 465px;
+          @include breakpoint(mob-lg) {
+            margin-bottom: 312px;
+          }
         }
         @include breakpoint(tablet) {
           font-size: 8rem;
@@ -266,6 +300,11 @@
           text-align: center;
           @include letter-spacing(20);
           margin-bottom: 354px;
+          @include breakpoint(mob-lg) {
+            font-size: 1.8rem;
+            text-align: left;
+            margin-bottom: 244px;
+          }
         }
       }
       .col-8 {
@@ -298,9 +337,15 @@
           line-height: 1.11em;
           margin-top: 31px;
           margin-bottom: 11px;
+          @include breakpoint(mob-lg) {
+            font-size: 3.5rem;
+          }
         }
         &.attribution {
           margin-bottom: 41px;
+          @include breakpoint(mob-lg) {
+            font-size: 1.7rem;
+          }
         }
       }
     }
@@ -309,6 +354,9 @@
       @include breakpoint(tablet) {
         align-items: center !important;
       }
+      @include breakpoint(mob-lg) {
+        margin-top: 54px;
+      }
     }
   }
   .watch {
@@ -316,6 +364,16 @@
     bottom: -310px;
     left: 50%;
     transform: translate(-50%, 0);
+    @include breakpoint(mob-lg) {
+      bottom: -20px;
+      left: 0;
+      transform: translate(0, 0);
+    }
+    img {
+      @include breakpoint(mob-lg) {
+        max-width: 100%;
+      }
+    }
   }
 }
 .chapter-5 {
@@ -335,6 +393,9 @@
   }
   @include breakpoint(tablet) {
     padding: 460px 0 0 !important;
+  }
+  @include breakpoint(mob-lg) {
+    background-size: 220% auto, auto;
   }
   .inner {
     .row-1 {
@@ -364,6 +425,9 @@
       .col-10 {
         @include breakpoint(tablet) {
           padding: 0 50px;
+        }
+        @include breakpoint(mob-lg) {
+          padding: 0;
         }
       }
     }
