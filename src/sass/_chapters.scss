@@ -383,7 +383,7 @@
   background-size: 100% auto, auto;
   padding: 1137px 0 0 !important;
   @include breakpoint(desk-xl) {
-    padding-top: 750px !important;
+    padding-top: 60% !important;
     background-position: top center, 200% 2000px;
   }
   @include breakpoint(desk-lg) {
