@@ -63,7 +63,108 @@
   <link rel="apple-touch-icon" sizes="180x180"
     href="https://brandedcontent.afr.com/wp-content/uploads/2018/07/apple-touch-icon-180x180-3.png">
 
-  <!-- TITAN GTM -->
+  <script>
+    var dataLayer = window.dataLayer || [];
+
+    //get sysenv
+    var sysEnv = "desktop";
+    if (window.innerWidth < 1000) {
+      sysEnv = "mobile";
+    }
+
+    dataLayer.push({
+      page: {
+        author: "",
+        publishDate: "20-11-17AEST00:00:0000000",
+        updateDate: "20-11-17AEST00:00:0000000",
+        renderedPlatform: "WEB",
+        authoredPlatform: "Pantheon",
+        viewID: "",
+        type: "Article",
+        assetId: "bvlgari",
+        contentSource: "AFR",
+        primaryTag: "",
+        tags: "",
+        components: "",
+        promotedType: "sponsored",
+        sponsored: "true",
+        name: "bvlgari",
+        template: "paidcontent",
+        didMount: "false",
+        customReferrer: document.referrer,
+        lifecycleType: "single"
+      },
+      network: {
+        deviceID: "",
+        marketingID: ""
+      },
+      client: {
+        deviceType: sysEnv
+      },
+      section: {
+        primaryCategory: "brandDiscover",
+        subCategory: ""
+      },
+      session: {
+        adBlocked: "",
+        gCookie: "",
+        privateBrowsingMode: ""
+      },
+      subs: {
+        memberID: "",
+        memberType: "visitor",
+        meterCount: "",
+        meterPeriodStart: "",
+        meterPeriodEnd: ""
+      },
+      brand: {
+        name: "afr",
+        Engagement: ""
+      }
+    });
+
+    // TITAN BASE CONFIG
+    var titanEnabled = true;
+    var digitalData = {
+      page: {
+        pageInfo: {
+          sysEnv: sysEnv
+        }
+      },
+      titan: {
+        spa: false,
+        adSite: "afr",
+        adZone: "immersiveafr2020",
+        adKeyValues: {
+          cat: "afr",
+          cat1: "2020",
+          cat2: "powerhousetimepiece",
+          ctype: "immersive"
+        },
+        adSlots: [adID]
+      }
+    };
+    var titan = titan || {};
+    titan.cmd = titan.cmd || []; // TITAN BASE CONFIG END
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WV7FLW7");
+  </script>
+    
 </head>
 
 <body>
@@ -541,9 +642,17 @@
 
   <footer class="masthead"></footer>
 
-  <!-- Google Tag Manager (noscript) -->
-
   <script src="https://players.brightcove.net/6165065566001/wIpGq2Kd0p_default/index.min.js"></script>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV7FLW7" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101266782-31"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-101266782-31"); </script>
 
 </body>
 
