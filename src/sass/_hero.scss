@@ -74,8 +74,6 @@
         right: unset;
         bottom: -120px;
       }
-      .hide-desktop {
-      }
 
       h1 {
         @include breakpoint(desk-xl) {
