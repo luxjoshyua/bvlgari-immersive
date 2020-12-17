@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://stash.9msn.net/scm/psw/000-metro-website-template.git"
+    "url": "https://github.com/luxjoshyua/bvlgari-immersive.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
