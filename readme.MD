@@ -1,4 +1,4 @@
-# Bvlgari Immersive
+# Bvlgari
 ### Immersive example for posterity
 
 
